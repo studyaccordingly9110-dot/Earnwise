@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { createClient } from "@/lib/supabase/client";
@@ -95,9 +96,13 @@ function SignupPageInner() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4 py-8">
         <Link href="/login" className="mb-6 flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-            <MessageSquare className="h-5 w-5" />
-          </div>
+          <Image 
+            src="/logo.png" 
+            alt="Logo" 
+            width={40} 
+            height={40} 
+            className="rounded-xl object-contain shadow-sm"
+          />
           <span className="text-xl font-bold tracking-tight text-foreground">
             Earnwise Ai Automation
           </span>
@@ -143,9 +148,13 @@ function SignupPageInner() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4 py-8">
       <Link href="/login" className="mb-6 flex items-center gap-2.5">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-          <MessageSquare className="h-5 w-5" />
-        </div>
+        <Image 
+          src="/logo.png" 
+          alt="Logo" 
+          width={40} 
+          height={40} 
+          className="rounded-xl object-contain shadow-sm"
+        />
         <span className="text-xl font-bold tracking-tight text-foreground">
           Earnwise Ai Automation
         </span>
